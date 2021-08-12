@@ -16,7 +16,7 @@ void ManualSummary::SetSum(double sum) {
 
 void ManualSummary::AddQuantile(double quantile, double value) {
   std::lock_guard<std::mutex> lock(mutex_);
-  quantiles_.insert(std::make_pair(quantile, value));
+  quantiles_.emplace(quantile, value);
 }
 
 ClientMetric ManualSummary::Collect() const {

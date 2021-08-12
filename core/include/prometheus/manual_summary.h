@@ -49,7 +49,7 @@ class PROMETHEUS_CPP_CORE_EXPORT ManualSummary {
   ClientMetric Collect() const;
 
  private:
-  const ManualQuantiles quantiles_;
+  ManualQuantiles quantiles_;
   mutable std::mutex mutex_;
   std::uint64_t count_ = 0;
   double sum_ = 0;

@@ -59,16 +59,16 @@ TEST(ManualSummaryTest, quantile_bounds) {
 }
 
 TEST(ManualSummaryTest, quantile_values) {
-  ManualSummaryTest summary;
+  ManualSummary summary;
   summary.AddQuantile(0.5, 12);
   summary.AddQuantile(0.75, 46);
   summary.AddQuantile(0.9, 88);
   auto metric = summary.Collect();
   auto s = metric.summary;
   ASSERT_EQ(s.quantile.size(), 3U);
-  EXPECT_NEAR(s.quantile.at(0).value, 12);
-  EXPECT_NEAR(s.quantile.at(1).value, 46);
-  EXPECT_NEAR(s.quantile.at(2).value, 88);
+  EXPECT_NEAR(s.quantile.at(0).value, 12, 0.01);
+  EXPECT_NEAR(s.quantile.at(1).value, 46, 0.01);
+  EXPECT_NEAR(s.quantile.at(2).value, 88, 0.01);
 }
 
 }  // namespace
