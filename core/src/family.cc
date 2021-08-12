@@ -133,5 +133,6 @@ template class PROMETHEUS_CPP_CORE_EXPORT Family<Counter>;
 template class PROMETHEUS_CPP_CORE_EXPORT Family<Gauge>;
 template class PROMETHEUS_CPP_CORE_EXPORT Family<Histogram>;
 template class PROMETHEUS_CPP_CORE_EXPORT Family<Summary>;
+template class PROMETHEUS_CPP_CORE_EXPORT Family<ManualSummary>;
 
 }  // namespace prometheus

@@ -39,6 +39,7 @@ template class PROMETHEUS_CPP_CORE_EXPORT Builder<Counter>;
 template class PROMETHEUS_CPP_CORE_EXPORT Builder<Gauge>;
 template class PROMETHEUS_CPP_CORE_EXPORT Builder<Histogram>;
 template class PROMETHEUS_CPP_CORE_EXPORT Builder<Summary>;
+template class PROMETHEUS_CPP_CORE_EXPORT Builder<ManualSummary>;
 
 }  // namespace detail
 
@@ -46,5 +47,6 @@ detail::Builder<Counter> BuildCounter() { return {}; }
 detail::Builder<Gauge> BuildGauge() { return {}; }
 detail::Builder<Histogram> BuildHistogram() { return {}; }
 detail::Builder<Summary> BuildSummary() { return {}; }
+detail::Builder<ManualSummary> BuildManualSummary() { return {}; }
 
 }  // namespace prometheus
