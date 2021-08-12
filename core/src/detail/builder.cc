@@ -6,6 +6,7 @@
 #include "prometheus/histogram.h"
 #include "prometheus/registry.h"
 #include "prometheus/summary.h"
+#include "prometheus/manual_summary.h"
 
 namespace prometheus {
 

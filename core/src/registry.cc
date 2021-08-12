@@ -10,6 +10,7 @@
 #include "prometheus/gauge.h"
 #include "prometheus/histogram.h"
 #include "prometheus/summary.h"
+#include "prometheus/manual_summary.h"
 
 namespace prometheus {
 
@@ -157,6 +158,10 @@ template Family<Gauge>& Registry::Add(
     const std::map<std::string, std::string>& labels);
 
 template Family<Summary>& Registry::Add(
+    const std::string& name, const std::string& help,
+    const std::map<std::string, std::string>& labels);
+
+template Family<ManualSummary>& Registry::Add(
     const std::string& name, const std::string& help,
     const std::map<std::string, std::string>& labels);
 
