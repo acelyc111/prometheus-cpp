@@ -2,12 +2,6 @@
 
 #include <gtest/gtest.h>
 
-#include <chrono>
-#include <cmath>
-#include <limits>
-#include <memory>
-#include <thread>
-
 namespace prometheus {
 namespace {
 

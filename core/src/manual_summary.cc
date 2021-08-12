@@ -1,7 +1,5 @@
 #include "prometheus/manual_summary.h"
 
-#include <utility>
-
 namespace prometheus {
 
 void ManualSummary::SetCount(std::uint64_t count) {
